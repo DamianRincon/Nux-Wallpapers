@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nux_wallpapers/screens/category_content.dart';
 import 'package:nux_wallpapers/screens/favorite_content.dart';
 import 'package:nux_wallpapers/screens/home_content.dart';
+import 'package:nux_wallpapers/screens/search_view.dart';
 import 'package:nux_wallpapers/screens/settings.dart';
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:nux_wallpapers/bloc/change_theme_bloc.dart';
@@ -77,7 +78,9 @@ class _HomeState extends State<Home> {
               ],
             ),
             floatingActionButton: FloatingActionButton(
-              onPressed: (){},
+              onPressed: (){
+                showSearch(context: context, delegate: WallpaperSearch());
+              },
               child: Icon(Icons.search, color: Colors.purple),
               backgroundColor: Colors.white,
             ),

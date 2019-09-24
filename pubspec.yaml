@@ -29,6 +29,7 @@ flutter:
 
   assets:
    - assets/n2.png
+   - assets/loading.gif
 
   fonts:
     - family: Sans
